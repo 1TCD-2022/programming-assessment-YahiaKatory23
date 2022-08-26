@@ -6,10 +6,11 @@ from doctest import OutputChecker
 print("Welcome to Yahia's driving quiz!")
 
 points = 0
-Start = input(print("Would you like to start? Yes/No "))
+Start = print("Would you like to start?  ")
+export = input("Yes/No: " )
 
-
-
+Yes = "Yes"
+No = "No"
 
 	
 #Questions
@@ -24,14 +25,14 @@ Q = ["Question 1: On what side of the road do you drive on? Option 1: The left s
 "Question 8: What colour are warning signs?: Op 1: Yellow and orange, Op 2: Blue, Op 3: Red.",
 "Question 9: How often must you renew a cars fitness warrant?: Op 1: Once every year, Op 2: Every 3 months, Op 3: Every 6 Months.",
 "Question 10: How good do you think this quiz was?: Op 1: Great ,Op 2: Amazing ,Op 3: Fantastic."]
-#Answers
 
+#Answers
 
 A = ['1','3','2','3','2','1','2','1','3','3']
 
 #Starting the code 
 
-if Start == "Yes" or "yes":
+if export == Yes:
     print("""
       
       To answer, Type either '1', '2', '3'. 
@@ -39,16 +40,12 @@ if Start == "Yes" or "yes":
       You have your options, choose wisely
       Goal: have more than 5 points
       """)
-	  
-print(Q[0])
-	
-answer1 = input("answer: ")
+    print(Q[0])
 
-if Start == "No":
+elif export == No:
     print("Then Dont")
-
-
-
+    	
+answer1 = input("answer: ")
 
 #Code  function
 
